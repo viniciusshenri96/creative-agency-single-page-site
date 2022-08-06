@@ -1,6 +1,6 @@
-<h1 align="center"> 
+<h2 align="center"> 
 	🚧 Creative agency single-page site ⏱️ Em desenvolvimento ⌛ 🚧
-</h1>
+</h2>
 
 </p>
 <h2 align="center"> 
