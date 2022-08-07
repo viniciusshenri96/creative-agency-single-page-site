@@ -42,6 +42,8 @@
 *::after,
 *::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* better for people who browse with the keyboard and know where they are on the site, so I set a different style, making it more visible, taking it from the default.
@@ -79,4 +81,77 @@ body {
   line-height: 1.5;
   /* improves text rendering */
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Layout */
+.container {
+  max-width: 1190px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  padding-top: 56px;
+  padding-bottom: 58px;
+}
+
+.menu-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-content {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  position: relative;
+}
+
+.nav-content::before {
+  content: "";
+  width: 705px;
+  height: 178px;
+  background-color: var(--color-red);
+  position: absolute;
+  top: -56px;
+  right: 0;
+  bottom: 0;
+  transform: translateX(165px);
+  z-index: -2;
+}
+
+.nav-itens {
+  display: grid;
+  grid-template-columns: 46px 53px 62px;
+  gap: 32px;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  display: inline-block;
+  font: var(--fw-regular) 1rem/2 "Commissioner";
+  color: var(--color-white);
+  padding: 10px 0;
+}
+.nav-link:hover,
+.nav-link:active {
+  font-weight: 700;
+}
+
+.btn-header:link,
+.btn-header:visited {
+  display: inline-block;
+  font: var(--fw-extraBold) 1rem/20px "Commissioner";
+  background-color: var(--color-bgBlack);
+  color: var(--color-white);
+  padding: 23px 44px 22px 45px;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-header:hover,
+.btn-header:active {
+  background-color: #979797;
 }
