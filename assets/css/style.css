@@ -179,7 +179,6 @@ body {
 /* SECTION-HERO */
 .section-hero {
   display: grid;
-  margin-bottom: ;
 }
 
 .hero-content {
@@ -214,9 +213,8 @@ body {
 
 .hero-img {
   grid-area: 1 / -1;
-  place-self: end;
-  margin-top: -112px;
-  margin-right: -165px;
+  justify-self: end;
+
   margin: -112px -165px 0 0;
 }
 
@@ -226,15 +224,23 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: auto 1fr;
+
   color: var(--color-white);
-  margin-bottom: 200px;
+}
+
+.strategic-img {
+  width: 100%;
+  height: 984px;
+  object-fit: cover;
+  object-position: left;
 }
 
 .strategic {
   background-color: var(--color-bgBlack);
-  max-width: 100%;
-  height: 784px;
+  max-width: 705px;
   position: relative;
+  /* max-width: 705px; */
+  height: 784px;
 }
 
 .strategic::before {
@@ -290,29 +296,37 @@ body {
 
 /* SECTION-APPROACH */
 .section-approach {
+  max-width: 1440px;
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
-  align-items: center;
+  justify-content: end;
+  margin: 0 auto;
+}
+.box {
+  width: 1275px;
+  display: grid;
+  margin: 0 auto;
+  margin-bottom: 200px;
 }
 .approach-title-box {
   grid-area: 1 / -1;
   z-index: 1;
   padding-right: 0;
+  margin-top: 200px;
 }
 
 .approach-title {
-  max-width: 560px;
-  justify-self: start;
+  max-width: 540px;
 }
 
 .approach-content {
   background-color: var(--color-red);
-  width: 895px;
+  max-width: 895px;
   height: 1100px;
   color: var(--color-white);
-  padding: 244px 106px 200px 285px;
+  padding: 200px 106px 200px 285px;
   grid-area: 1 / -1;
   justify-self: end;
+  margin-top: -200px;
 }
 
 .approach-list {
