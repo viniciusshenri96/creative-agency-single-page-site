@@ -235,10 +235,9 @@ body {
 }
 
 .strategic-img {
-  max-width: 100%;
+  max-width: 735px;
   height: 984px;
-  object-fit: cover;
-  object-position: left;
+  background: url(../img/desktop/image-strategic.jpg) no-repeat center center;
   grid-column: 1 / span 2;
 }
 
