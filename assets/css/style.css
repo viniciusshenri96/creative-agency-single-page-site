@@ -388,6 +388,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   display: grid;
+  margin-bottom: 120px;
 }
 .brand-content {
   max-width: 735px;
@@ -448,4 +449,51 @@ body {
 .btn-brand-box {
   display: flex;
   gap: 16px;
+}
+
+/* FOOTER */
+.footer {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 115px;
+}
+
+.footer-title {
+  max-width: 635px;
+  position: relative;
+}
+
+/* .footer-title::after {
+  content: "";
+  display: block;
+
+  margin-left: -202px;
+  transform: translate(-202px, -95px);
+} */
+
+.footer-title-box {
+  display: flex;
+  position: relative;
+}
+
+.footer-title-box div {
+  position: absolute;
+  width: 135px;
+  height: 61px;
+  background-image: url(../img/desktop/bg-pattern-wave-red.svg);
+  top: 50%;
+  left: -220px;
+  transform: translateY(-50%);
+  /* transform: translateX(-50%); */
+}
+
+.btn-footer {
+  display: inline-block;
+
+  font: var(--fw-extraBold) 16px/20px "Commissioner";
+  color: var(--color-white);
+  background-color: var(--color-red);
+  padding: 23px 44px 21px 45px;
 }
