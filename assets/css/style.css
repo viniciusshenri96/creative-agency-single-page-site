@@ -382,3 +382,70 @@ body {
 .approach-desc {
   max-width: 500px;
 }
+
+/* SECTION BRAND */
+.section-brand {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+}
+.brand-content {
+  max-width: 735px;
+  height: 528px;
+  background-color: var(--color-bgBlack);
+  padding: 152px 125px 152px 165px;
+  color: var(--color-white);
+  grid-area: 1 / -1;
+  z-index: 1;
+  position: relative;
+}
+
+.brand-content::after {
+  content: "";
+  display: block;
+  width: 134px;
+  height: 60px;
+  background-image: url(../img/desktop/bg-pattern-wavy-white.svg);
+  position: absolute;
+  top: 186px;
+  right: 0;
+  transform: translate(50%);
+}
+
+.brand-title {
+  margin-bottom: 51px;
+}
+
+.brand-img-box {
+  display: grid;
+  justify-content: start;
+  grid-area: 1 / -1;
+  justify-self: end;
+}
+
+.brand-roadmap {
+  font: var(--fw-extraBold) 20px/32px "Commissioner";
+}
+
+.brand-img {
+  grid-area: 1 / -1;
+}
+
+.brand-legend {
+  grid-area: 1 / -1;
+  color: var(--color-white);
+  z-index: 1;
+  place-self: end;
+  margin-bottom: 68px;
+  margin-right: 154px;
+  display: grid;
+}
+
+.brand-project {
+  justify-self: end;
+}
+
+.btn-brand-box {
+  display: flex;
+  gap: 16px;
+}
