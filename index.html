@@ -1,138 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This challenge will put your layout skills to the test with lots of overlapping elements. If you're getting confident with your CSS layouts, this will be a great project!"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="This challenge will put your layout skills to the test with lots of overlapping elements. If you're getting confident with your CSS layouts, this will be a great project!">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <title>Frontend Mentor | Creative single page site</title>
 
-  <title>Frontend Mentor | Creative single page site</title>
-</head>
+    <script defer src="./assets/js/script.js"></script>
+  </head>
 
-<body>
-  <header class="header">
-    <nav class="menu-nav container">
-      <div class="nav-content">
-        <a href="#">
-          <img src="./assets/img/desktop/logo.svg" alt="">
+  <body>
+    <header class="header container">
+      <div class="header-box">
+        <a href="/" class="header__logo">
+          <img src="./assets/img/desktop/logo.svg" alt="" />
         </a>
-        <div class="nav-itens-btn">
-          <ul class="nav-itens">
-            <li><a class="nav-link" href="#">About</a></li>
-            <li><a class="nav-link" href="#">Service</a></li>
-            <li><a class="nav-link" href="#">Projects</a></li>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#">About</a></li>
+            <li><a class="nav__link" href="#">Service</a></li>
+            <li><a class="nav__link" href="#">Projects</a></li>
           </ul>
-          <a class="btn-header" href="#">Schedule a Call</a>
+          <a class="nav__btn" href="#">Schedule a Call</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero container">
+      <div class="hero-box">
+        <div class="hero__content">
+          <h1 class="hero__title font-h1">Branding & website design agency</h1>
+          <p class="hero__desc font-body">
+            We specialize in visual storytelling by creating cohesive brand and
+            website design solutions for small businesses, giving lasting
+            impressions to audiences in a digital world.
+          </p>
+          <a class="hero__btn" href="#">Learn More</a>
+        </div>
+        <picture class="hero__img-box">
+          <source
+            media="(max-width: 380px)"
+            srcset="./assets/img/mobile/image-hero.jpg"
+          />
+          <source
+            media="(max-width: 660px)"
+            srcset="./assets/img/mobile_/image-hero.jpg"
+          />
+          <source
+            media="(max-width: 940px)"
+            srcset="./assets/img/tablet/image-hero.jpg"
+          />
+          <img
+            class="hero__img"
+            src="./assets/img/desktop/image-hero.jpg"
+            alt=""
+          />
+        </picture>
+      </div>
+    </section>
+
+    <section class="design">
+      <picture class="design__img-box">
+        <source
+          media="(max-width: 520px)"
+          srcset="./assets/img/mobile/image-strategic.jpg"
+        />
+        <source
+          media="(max-width: 768px)"
+          srcset="./assets/img/tablet/image-strategic.jpg"
+        />
+        <img
+          class="design__img"
+          src="./assets/img/desktop/image-strategic.jpg"
+          alt=""
+        />
+      </picture>
+      <div class="design__content">
+        <div class="design__content-box">
+          <h2 class="design__title font-h2">
+            <span class="design__title--red">Design</span> is strategic.
+          </h2>
+          <p class="design__desc font-body">
+            “A well-crafted design strategy consistently produces desired
+            outcomes and brand awareness. We are firm believers that success
+            lies in creative collaboration with our clients.”
+          </p>
+          <a class="design__link" href="#">Schedule a Call</a>
         </div>
       </div>
-    </nav>
-  </header>
+    </section>
 
-  <section class="section-hero container">
-    <div class="hero-content">
-      <h1 class="hero-title font-h1">Branding &
-        website design agency</h1>
-      <p class="hero-description font-body">We specialize in visual storytelling by creating cohesive brand and website design solutions for small businesses, giving lasting impressions to audiences in a digital world.</p>
-      <a class="btn-hero font-body" href="#">Learn More</a>
-    </div>
-    <picture class="hero-img">
-      <source srcset="./assets/img/tablet/image-hero.jpg" media="(max-width: 1000px)">
-      <img src="./assets/img/desktop/image-hero.jpg" alt="">
-    </picture>
-  </section>
-
-  <section class="section-strategic-bg ">
-    <!-- <picture class="strategic-img-box">
-      <img class="strategic-img" src="./assets/img/desktop/image-strategic.jpg" alt="">
-    </picture> -->
-
-    <div class="strategic-img"></div>
-
-    <div class="strategic">
-      <div class="strategic-content">
-        <h2 class="strategic-title font-h2"><span>Design</span> is strategic.</h2>
-        <p class="strategic-description font-body">“A well-crafted design strategy consistently produces desired outcomes and brand awareness. We are firm believers that success lies in creative collaboration with our clients.”</p>
-        <a class="btn-strategic font-body" href="#">Schedule a Call</a>
+    <section class="approach container">
+      <div class="approach__content">
+        <h2 class="approach__title font-h2">
+          Our approach for creating a winning brand
+        </h2>
+        <ul class="approach__list">
+          <li class="approach__item">
+            <span class="approach__number font-h1">01</span>
+            <div class="approach__item-box">
+              <h3 class="approach__sub font-h3">Brand Strategy</h3>
+              <p class="approach__desc font-body">
+                Brand strategy is critical for long-term success. Outshining
+                competitors and capturing the target audience are key.
+              </p>
+            </div>
+          </li>
+          <li class="approach__item">
+            <span class="approach__number font-h1">02</span>
+            <div class="approach__item-box">
+              <h3 class="approach__sub font-h3">Brand Design</h3>
+              <p class="approach__desc font-body">
+                Keeping the brand design unique and meaningful helps in
+                communicating the brand’s timeless value effectively.
+              </p>
+            </div>
+          </li>
+          <li class="approach__item">
+            <span class="approach__number font-h1">03</span>
+            <div class="approach__item-box">
+              <h3 class="approach__sub font-h3">Web Design</h3>
+              <p class="approach__desc font-body">
+                A beautifully crafted website is the best tool for brand
+                awareness, and ultimately results in increased revenues.
+              </p>
+            </div>
+          </li>
+        </ul>
       </div>
-    </div>
-  </section>
+      <div class="bg"></div>
+      <!-- <div class="bg"></div> -->
+    </section>
 
-  <section class="section-approach container">
-
-    <div class="approach-title-box">
-      <h2 class="approach-title font-h2">Our approach for creating a winning brand</h2>
-    </div>
-    <div class="approach-content">
-      <ul class="approach-list">
-        <li class="approach-item">
-          <span class="number-datails">01</span>
-          <div class="approach-info">
-            <h3 class="approach-subtitle font-h3 ">Brand Strategy</h3>
-            <p class="approach-desc font-body">Brand strategy is critical for long-term success. Outshining competitors and capturing the target audience are key.</p>
-          </div>
-        </li>
-        <li class="approach-item">
-          <span class="number-datails">02</span>
-          <div class="approach-info">
-            <h3 class="approach-subtitle font-h3 ">Brand Design</h3>
-            <p class="approach-desc font-body">Keeping the brand design unique and meaningful helps in communicating the brand’s timeless value effectively.</p>
-          </div>
-        </li>
-        <li class="approach-item">
-          <span class="number-datails">03</span>
-          <div class="approach-info">
-            <h3 class="approach-subtitle font-h3 ">Web Design</h3>
-            <p class="approach-desc font-body">A beautifully crafted website is the best tool for brand awareness, and ultimately results in increased revenues. </p>
-          </div>
-        </li>
-      </ul>
-    </div>
-    </div>
-  </section>
-
-  <section class="section-brand">
-    <div class="brand-content">
-      <h2 class="brand-title font-h2">Brand naming & guidelines</h2>
-      <div class="btn-brand-box">
-        <a href="#" class="btn-previous">
+    <section class="brand">
+      <div class="brand__title-box">
+        <h2 class="brand__title font-h2">Brand naming & guidelines</h2>
+        <button class="brand__btn-right">
           <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-            <g transform="matrix(-1 0 0 1 40 0)" stroke="#F94F4F" fill="none" fill-rule="evenodd">
+            <g
+              transform="matrix(-1 0 0 1 40 0)"
+              stroke="#F94F4F"
+              fill="none"
+              fill-rule="evenodd"
+            >
               <circle cx="20" cy="20" r="19.5" />
               <path stroke-width="2" d="M17.5 15l5 5-5 5" />
             </g>
           </svg>
-        </a>
-        <a href="#" class="btn-next">
+        </button>
+        <button class="brand__btn-left">
           <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
             <g stroke="#F94F4F" fill="none" fill-rule="evenodd">
               <circle cx="20" cy="20" r="19.5" />
               <path stroke-width="2" d="M17.5 15l5 5-5 5" />
             </g>
           </svg>
-        </a>
+        </button>
       </div>
-    </div>
-    <picture class="brand-img-box">
-      <img class="brand-img" src="./assets/img/desktop/image-slide-1.jpg" alt="">
-      <figcaption class="brand-legend">
-        <p class="brand-roadmap">Lean Product Roadmap</p>
-        <span class="brand-project font-body">2019 Project</span>
-      </figcaption>
+      <div class="brand__content">
+        <picture class="brand__img-box">
+          <source
+            media="(max-width: 500px)"
+            srcset="./assets/img/mobile/image-slide-1.jpg"
+          />
+          <source
+            media="(max-width: 800px)"
+            srcset="./assets/img/tablet/image-slide-1.jpg"
+          />
+          <img
+            class="brand__img"
+            src="./assets/img/desktop/image-slide-1.jpg"
+            alt=""
+          />
+        </picture>
+        <p class="brand__info font-body">
+          Lean Product Roadmap
+          <span class="brand__date"> 2019 Project </span>
+        </p>
       </div>
-    </picture>
-  </section>
+    </section>
 
-  <footer class="footer container">
-    <div class="footer-title-box">
-      <div></div>
-      <h2 class="footer-title font-h2">Let's build something great together.
-      </h2>
-    </div>
-    <a class="btn-footer" href="#">Schedule a Call</a>
-  </footer>
-</body>
+    <footer class="footer container">
+      <p class="footer__desc font-h2">Let's build something great together.</p>
+      <a class="footer__btn" href="/">Schedule a Call</a>
+    </footer>
 
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
