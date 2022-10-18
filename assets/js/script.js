@@ -51,8 +51,8 @@ const slider = function () {
       contSlide += 1;
     } else {
       returnSlide(0);
-
       init();
+
       imgBox[0].classList.add("animation-img");
       brandTitle[0].classList.add("animation-title");
     }
@@ -72,7 +72,6 @@ const slider = function () {
       contSlide -= 1;
     } else {
       returnSlide(indexTesti);
-
       init();
 
       imgBox[indexTesti].classList.add("animation-img2");
@@ -147,3 +146,52 @@ nav.addEventListener("mouseout", function (e) {
     logo.style.opacity = 1;
   }
 });
+
+// Menu mobile
+
+const initMenuMobile = function () {};
+
+const menuButton = document.querySelector('[data-menu="button"');
+
+const menuList = document.querySelector('[data-menu="menu-list"');
+
+const events = ["click"];
+
+const openMenu = function (event) {
+  menuList.classList.add("active");
+  menuButton.classList.add("active");
+
+  outsideClick(menuList, events, () => {
+    menuList.classList.remove("active");
+    menuButton.classList.remove("active");
+  });
+};
+
+events.forEach((usersEvent) => {
+  menuButton.addEventListener(usersEvent, openMenu);
+});
+
+function outsideClick(element, events, callback) {
+  const html = document.querySelector("html");
+  const outside = "data-outside";
+
+  if (!element.hasAttribute(outside)) {
+    events.forEach((userEvent) => {
+      setTimeout(() => {
+        html.addEventListener(userEvent, handleOutsideClick);
+      });
+    });
+    element.setAttribute(outside, "");
+  }
+
+  function handleOutsideClick(event) {
+    if (!element.contains(event.target)) {
+      element.removeAttribute(outside);
+
+      events.forEach((userEvent) => {
+        html.removeEventListener(userEvent, handleOutsideClick);
+      });
+      callback();
+    }
+  }
+}
