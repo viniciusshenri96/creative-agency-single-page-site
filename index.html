@@ -17,8 +17,6 @@
     />
 
     <title>Frontend Mentor | Creative single page site</title>
-
-    <script defer src="./assets/js/script.js"></script>
   </head>
 
   <body>
@@ -33,7 +31,7 @@
             <li><a class="nav__link" href="#">Service</a></li>
             <li><a class="nav__link" href="#">Projects</a></li>
           </ul>
-          <a class="nav__btn" href="#">Schedule a Call</a>
+          <a class="nav__link nav__btn" href="#">Schedule a Call</a>
         </nav>
       </div>
     </header>
@@ -71,7 +69,7 @@
       </div>
     </section>
 
-    <section class="design">
+    <section class="section design">
       <picture class="design__img-box">
         <source
           media="(max-width: 520px)"
@@ -102,7 +100,7 @@
       </div>
     </section>
 
-    <section class="approach container">
+    <section class="section approach container">
       <div class="approach__content">
         <h2 class="approach__title font-h2">
           Our approach for creating a winning brand
@@ -144,10 +142,88 @@
       <!-- <div class="bg"></div> -->
     </section>
 
-    <section class="brand">
-      <div class="brand__title-box">
-        <h2 class="brand__title font-h2">Brand naming & guidelines</h2>
-        <button class="brand__btn-right">
+    <section class="section brand-box">
+      <div class="brand">
+        <div class="brand__title-box">
+          <h2 class="brand__title font-h2">Brand naming & guidelines</h2>
+        </div>
+        <div class="brand__content">
+          <picture class="brand__img-box">
+            <source
+              media="(max-width: 500px)"
+              srcset="./assets/img/mobile/image-slide-1.jpg"
+            />
+            <source
+              media="(max-width: 800px)"
+              srcset="./assets/img/tablet/image-slide-1.jpg"
+            />
+            <img
+              class="brand__img"
+              src="./assets/img/desktop/image-slide-1.jpg"
+              alt=""
+            />
+          </picture>
+          <p class="brand__info font-body">
+            Lean Product Roadmap
+            <span class="brand__date"> 2019 Project </span>
+          </p>
+        </div>
+      </div>
+      <div class="brand visible">
+        <div class="brand__title-box">
+          <h2 class="brand__title font-h2">Brand identity & merchandise</h2>
+        </div>
+        <div class="brand__content">
+          <picture class="brand__img-box">
+            <source
+              media="(max-width: 500px)"
+              srcset="./assets/img/mobile/image-slide-2.jpg"
+            />
+            <source
+              media="(max-width: 800px)"
+              srcset="./assets/img/tablet/image-slide-2.jpg"
+            />
+            <img
+              class="brand__img"
+              src="./assets/img/desktop/image-slide-2.jpg"
+              alt=""
+            />
+          </picture>
+          <p class="brand__info font-body">
+            New Majestic Hotel
+            <span class="brand__date">2018 Project</span>
+          </p>
+        </div>
+      </div>
+      <div class="brand visible">
+        <div class="brand__title-box">
+          <h2 class="brand__title font-h2">Brand identity & web design</h2>
+        </div>
+        <div class="brand__content">
+          <picture class="brand__img-box">
+            <source
+              media="(max-width: 500px)"
+              srcset="./assets/img/mobile/image-slide-3.jpg"
+            />
+            <source
+              media="(max-width: 800px)"
+              srcset="./assets/img/tablet/image-slide-3.jpg"
+            />
+            <img
+              class="brand__img"
+              src="./assets/img/desktop/image-slide-3.jpg"
+              alt=""
+            />
+          </picture>
+          <p class="brand__info font-body">
+            Crypto Dashboard
+            <span class="brand__date">2016 Project</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="brand__btn-box">
+        <button class="brand__btn-left">
           <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
             <g
               transform="matrix(-1 0 0 1 40 0)"
@@ -160,7 +236,7 @@
             </g>
           </svg>
         </button>
-        <button class="brand__btn-left">
+        <button class="brand__btn-right">
           <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
             <g stroke="#F94F4F" fill="none" fill-rule="evenodd">
               <circle cx="20" cy="20" r="19.5" />
@@ -168,27 +244,6 @@
             </g>
           </svg>
         </button>
-      </div>
-      <div class="brand__content">
-        <picture class="brand__img-box">
-          <source
-            media="(max-width: 500px)"
-            srcset="./assets/img/mobile/image-slide-1.jpg"
-          />
-          <source
-            media="(max-width: 800px)"
-            srcset="./assets/img/tablet/image-slide-1.jpg"
-          />
-          <img
-            class="brand__img"
-            src="./assets/img/desktop/image-slide-1.jpg"
-            alt=""
-          />
-        </picture>
-        <p class="brand__info font-body">
-          Lean Product Roadmap
-          <span class="brand__date"> 2019 Project </span>
-        </p>
       </div>
     </section>
 
