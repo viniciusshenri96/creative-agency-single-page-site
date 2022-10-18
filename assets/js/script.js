@@ -126,7 +126,6 @@ nav.addEventListener("mouseover", function (e) {
 
     sibling.forEach((el) => {
       if (el !== link) el.style.opacity = 0.5;
-      // if (el !== link) el.style.transform = "translateY(-5px)";
     });
     logo.style.opacity = 0.5;
   }
@@ -144,7 +143,6 @@ nav.addEventListener("mouseout", function (e) {
 
     sibling.forEach((el) => {
       if (el !== link) el.style.opacity = 1;
-      // if (el !== link) el.style.transform = "translateY(0px)";
     });
     logo.style.opacity = 1;
   }
