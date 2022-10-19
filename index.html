@@ -9,11 +9,13 @@
     />
 
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon-32x32.png"
+      href="./assets/img/favicon.png"
     />
 
     <title>Frontend Mentor | Creative single page site</title>
@@ -26,14 +28,19 @@
           <img src="./assets/img/desktop/logo.svg" alt="" />
         </a>
         <nav class="nav">
-          <button data-menu="button" aria-expanded="false" aria-controls="menu">
-            <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg">
+          <button
+            data-menu="button"
+            aria-expanded="false"
+            aria-controls="menu"
+            aria-label="icons"
+          >
+            <svg width="24" height="18" aria-hidden="true">
               <g fill="#000" fill-rule="evenodd" opacity=".5">
                 <path d="M0 0h24v2H0zM0 8h24v2H0zM0 16h24v2H0z" />
               </g>
             </svg>
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+            <svg aria-hidden="true" width="20" height="20">
               <g fill-rule="evenodd" opacity=".5">
                 <path d="M2.222.808l16.97 16.97-1.414 1.414L.808 2.222z" />
                 <path d="M.808 17.778L17.778.808l1.414 1.414-16.97 16.97z" />
@@ -41,13 +48,13 @@
             </svg>
           </button>
 
-          <div class="menu-box" data-menu="menu-list">
-            <ul class="nav__list" data-menu="list" id="menu">
+          <div class="nav__menu-box" data-menu="menu-list">
+            <ul class="nav__list" data-menu="list">
               <li><a class="nav__link" href="#">About</a></li>
               <li><a class="nav__link" href="#">Service</a></li>
               <li><a class="nav__link" href="#">Projects</a></li>
             </ul>
-            <a class="nav__link nav__btn" href="#">Schedule a Call</a>
+            <a class="nav__link nav__btn btn-font" href="#">Schedule a Call</a>
           </div>
         </nav>
       </div>
@@ -117,8 +124,8 @@
       </div>
     </section>
 
-    <section class="section approach container">
-      <div class="approach__content">
+    <section class="section approach">
+      <div class="approach-box">
         <h2 class="approach__title font-h2">
           Our approach for creating a winning brand
         </h2>
@@ -154,8 +161,11 @@
             </div>
           </li>
         </ul>
+        <!-- <div class="approach__content">
+        </div> -->
       </div>
       <div class="bg"></div>
+
       <!-- <div class="bg"></div> -->
     </section>
 
@@ -266,7 +276,7 @@
 
     <footer class="footer container">
       <p class="footer__desc font-h2">Let's build something great together.</p>
-      <a class="footer__btn" href="/">Schedule a Call</a>
+      <a class="footer__btn btn-font" href="/">Schedule a Call</a>
     </footer>
 
     <script src="./assets/js/script.js"></script>

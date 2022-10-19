@@ -1,5 +1,6 @@
 "use strict";
 
+// ====== SLIDER ======
 const slider = function () {
   // Selecting Elements
   const btnNext = document.querySelector(".brand__btn-right");
@@ -90,6 +91,7 @@ const slider = function () {
 };
 slider();
 
+// ====== Revealing Elements on Scroll ======
 const allSection = document.querySelectorAll(".section");
 
 const obsSec = function (entries, observer) {
@@ -111,6 +113,7 @@ allSection.forEach((section) => {
   section.classList.add("section--hidden");
 });
 
+// ====== Menu fade animation ======
 const nav = document.querySelector(".nav");
 
 nav.addEventListener("mouseover", function (e) {
@@ -147,17 +150,14 @@ nav.addEventListener("mouseout", function (e) {
   }
 });
 
-// Menu mobile
-
-const initMenuMobile = function () {};
-
+// ====== Menu mobile ======
 const menuButton = document.querySelector('[data-menu="button"');
 
 const menuList = document.querySelector('[data-menu="menu-list"');
 
 const events = ["click"];
 
-const openMenu = function (event) {
+const openMenu = function () {
   menuList.classList.add("active");
   menuButton.classList.add("active");
 
