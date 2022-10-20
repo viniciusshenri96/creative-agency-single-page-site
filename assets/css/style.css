@@ -94,6 +94,15 @@ body {
   margin: 0 auto;
 }
 
+/* css reusable */
+.grid-layout {
+  display: grid;
+}
+
+.grid-area {
+  grid-area: 1 / 1;
+}
+
 /* Animation for javascript*/
 .section {
   transition: transform 1s, opacity 1s;
@@ -102,15 +111,6 @@ body {
 .section--hidden {
   opacity: 0;
   transform: translateY(-8rem);
-}
-
-/* css reusable */
-.grid-layout {
-  display: grid;
-}
-
-.grid-area {
-  grid-area: 1 / 1;
 }
 
 /*----------------*/
@@ -361,6 +361,23 @@ body {
 
 /*----------------*/
 /*=====SECTION - BRAND=====*/
+.brand {
+  transition: all 0.3s ease-in-out;
+}
+
+.brand.active {
+  animation: showSlide 1s forwards;
+}
+
+@keyframes showSlide {
+  from {
+    transform: scaleX(1.2);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 .brand-box {
   max-width: calc(1440rem / 16);
   margin: 0 auto;
@@ -464,74 +481,9 @@ body {
   font-weight: var(--fw-regular);
 }
 
-/* Animation with JavaScript */
-.animation-img {
-  animation: teste 1s forwards;
-}
-
-.animation-title {
-  animation: teste2 2s forwards;
-}
-
-@keyframes teste {
-  0% {
-    opacity: 0.5;
-    transform: translateX(-400px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes teste2 {
-  0% {
-    opacity: 0.5;
-    transform: translateX(-400px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animation-img2 {
-  animation: teste3 1s forwards;
-}
-
-.animation-title2 {
-  animation: teste4 2s forwards;
-}
-
-@keyframes teste3 {
-  0% {
-    opacity: 0.5;
-    transform: translateX(400px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes teste4 {
-  0% {
-    opacity: 0.5;
-    transform: translateX(400px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 /*----------------*/
 /*=====FOOTER=====*/
-.footer {
+.footer.container {
   display: flex;
   align-items: center;
   justify-content: space-between;

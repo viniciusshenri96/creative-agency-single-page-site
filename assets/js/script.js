@@ -6,77 +6,56 @@ const slider = function () {
   const btnNext = document.querySelector(".brand__btn-right");
   const btnPrev = document.querySelector(".brand__btn-left");
   const brand = document.querySelectorAll(".brand");
-  const imgBox = document.querySelectorAll(".brand__img-box");
-  const brandTitle = document.querySelectorAll(".brand__title-box");
+
   let contSlide = 0;
   let indexTesti = brand.length - 1;
+
+  const slideShow = function (opr) {
+    brand.forEach((b) => b.classList.remove("active"));
+    brand[opr].classList.add("active");
+  };
+
+  const normalOpacity = function (opa) {
+    brand[opa].style.opacity = 1;
+  };
 
   const returnSlide = function (index) {
     brand[contSlide].style.opacity = 0;
     contSlide = index;
     brand[contSlide].style.opacity = 1;
-  };
 
-  const removeAnimationImg = function (img1, img2) {
-    imgBox.forEach((img) => {
-      img.classList.remove(img1);
-      img.classList.remove(img2);
-    });
-  };
+    slideShow(index);
 
-  const removeAnimationTitle = function (title, title2) {
-    brandTitle.forEach((brand) => {
-      brand.classList.remove(title);
-      brand.classList.remove(title2);
-    });
-  };
-
-  const init = function () {
-    removeAnimationImg("animation-img", "animation-img2");
-    removeAnimationTitle("animation-title", "animation-title2");
-    removeAnimationImg("animation-img", "animation-img2");
-    removeAnimationTitle("animation-title", "animation-title2");
+    normalOpacity(index);
   };
 
   // Logic for next
   const nextSlide = function () {
     if (contSlide !== indexTesti) {
       brand[contSlide + 1].previousElementSibling.style.opacity = 0;
-      brand[contSlide + 1].style.opacity = 1;
 
-      init();
+      normalOpacity(+`${contSlide + 1}`);
 
-      imgBox[contSlide + 1].classList.add("animation-img");
-      brandTitle[contSlide + 1].classList.add("animation-title");
+      slideShow(+`${contSlide + 1}`);
 
       contSlide += 1;
     } else {
       returnSlide(0);
-      init();
-
-      imgBox[0].classList.add("animation-img");
-      brandTitle[0].classList.add("animation-title");
     }
   };
 
   // Logic to go previous
   const prevSlide = function () {
     if (contSlide <= indexTesti && contSlide !== 0) {
-      brand[contSlide - 1].style.opacity = 1;
       brand[contSlide].style.opacity = 0;
 
-      init();
+      normalOpacity(+`${contSlide - 1}`);
 
-      imgBox[contSlide - 1].classList.add("animation-img2");
-      brandTitle[contSlide - 1].classList.add("animation-title2");
+      slideShow(+`${contSlide - 1}`);
 
       contSlide -= 1;
     } else {
       returnSlide(indexTesti);
-      init();
-
-      imgBox[indexTesti].classList.add("animation-img2");
-      brandTitle[indexTesti].classList.add("animation-title2");
     }
   };
 
@@ -85,6 +64,7 @@ const slider = function () {
 
   // Slide with keydown
   document.addEventListener("keydown", function (e) {
+    // short circuit
     e.key === "ArrowRight" && nextSlide();
     e.key === "ArrowLeft" && prevSlide();
   });
@@ -94,7 +74,7 @@ slider();
 // ====== Revealing Elements on Scroll ======
 const allSection = document.querySelectorAll(".section");
 
-const obsSec = function (entries, observer) {
+const displaySection = function (entries, observer) {
   const [entry] = entries;
 
   if (!entry.isIntersecting) return;
@@ -103,7 +83,7 @@ const obsSec = function (entries, observer) {
   observer.unobserve(entry.target);
 };
 
-const sectionObserver = new IntersectionObserver(obsSec, {
+const sectionObserver = new IntersectionObserver(displaySection, {
   root: null,
   threshold: 0.15,
 });
@@ -116,71 +96,55 @@ allSection.forEach((section) => {
 // ====== Menu fade animation ======
 const nav = document.querySelector(".nav");
 
-nav.addEventListener("mouseover", function (e) {
-  const clicked = e.target.closest(".nav__link");
+// The function created inside the menuAnimation function, will have access to the parameter of the parent function, even after it is executed, this is called closure.
+const menuAnimation = function (opacity) {
+  return function (e) {
+    const clicked = e.target.closest(".nav__link");
 
-  if (!clicked) return;
+    if (!clicked) return;
 
-  if (clicked.classList.contains("nav__link")) {
-    const link = e.target;
-    const sibling = document.querySelectorAll(".nav__link");
-    const logo = nav.closest(".header-box").querySelector(".header__logo");
+    if (clicked.classList.contains("nav__link")) {
+      const link = e.target;
+      const sibling = document.querySelectorAll(".nav__link");
+      const logo = nav.closest(".header-box").querySelector(".header__logo");
 
-    sibling.forEach((el) => {
-      if (el !== link) el.style.opacity = 0.5;
-    });
-    logo.style.opacity = 0.5;
-  }
-});
+      sibling.forEach((el) => {
+        if (el !== link) el.style.opacity = opacity;
+      });
+      logo.style.opacity = opacity;
+    }
+  };
+};
 
-nav.addEventListener("mouseout", function (e) {
-  const clicked = e.target.closest(".nav__link");
-
-  if (!clicked) return;
-
-  if (clicked.classList.contains("nav__link")) {
-    const link = e.target;
-    const sibling = document.querySelectorAll(".nav__link");
-    const logo = nav.closest(".header-box").querySelector(".header__logo");
-
-    sibling.forEach((el) => {
-      if (el !== link) el.style.opacity = 1;
-    });
-    logo.style.opacity = 1;
-  }
-});
+nav.addEventListener("mouseover", menuAnimation(0.5));
+nav.addEventListener("mouseout", menuAnimation(1));
 
 // ====== Menu mobile ======
 const menuButton = document.querySelector('[data-menu="button"');
 
 const menuList = document.querySelector('[data-menu="menu-list"');
 
-const events = ["click"];
+const events = "click";
+const classAct = "active";
 
 const openMenu = function () {
-  menuList.classList.add("active");
-  menuButton.classList.add("active");
+  menuList.classList.add(classAct);
+  menuButton.classList.add(classAct);
 
   outsideClick(menuList, events, () => {
-    menuList.classList.remove("active");
-    menuButton.classList.remove("active");
+    menuList.classList.remove(classAct);
+    menuButton.classList.remove(classAct);
   });
 };
 
-events.forEach((usersEvent) => {
-  menuButton.addEventListener(usersEvent, openMenu);
-});
+menuButton.addEventListener(events, openMenu);
 
 function outsideClick(element, events, callback) {
   const html = document.querySelector("html");
   const outside = "data-outside";
 
   if (!element.hasAttribute(outside)) {
-    events.forEach((userEvent) => {
-      setTimeout(() => {
-        html.addEventListener(userEvent, handleOutsideClick);
-      });
-    });
+    setTimeout(() => html.addEventListener(events, handleOutsideClick));
     element.setAttribute(outside, "");
   }
 
@@ -188,10 +152,21 @@ function outsideClick(element, events, callback) {
     if (!element.contains(event.target)) {
       element.removeAttribute(outside);
 
-      events.forEach((userEvent) => {
-        html.removeEventListener(userEvent, handleOutsideClick);
-      });
+      html.removeEventListener(events, handleOutsideClick);
+
       callback();
     }
   }
 }
+
+// // When the screen is larger than 800px, the mobile menu automatically closes
+// const bigDisplay = function () {
+//   const displayResize = matchMedia("(min-width: 700px)").matches;
+
+//   if (displayResize) {
+//     menuList.classList.remove("active");
+//     menuButton.classList.remove("active");
+//   }
+// };
+
+// window.addEventListener("resize", bigDisplay);
