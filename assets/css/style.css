@@ -94,18 +94,32 @@ body {
   margin: 0 auto;
 }
 
-/*----------------*/
-/*=====HEADER=====*/
-.header {
+/* Animation for javascript*/
+.section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(-8rem);
+}
+
+/* css reusable */
+.grid-layout {
   display: grid;
 }
 
+.grid-area {
+  grid-area: 1 / 1;
+}
+
+/*----------------*/
+/*=====HEADER=====*/
 .header-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
   align-self: start;
-  grid-area: 1 / 1;
   padding-top: 3.5rem;
 }
 
@@ -132,7 +146,6 @@ body {
 
 .nav__list {
   /* set with display grid, so sibling elements don't move */
-  display: grid;
   grid-template-columns: 2.875rem 3.313rem 3.75rem;
   gap: 2rem;
 }
@@ -176,17 +189,11 @@ body {
 
 /*----------------*/
 /*=====SECTION - HERO=====*/
-.hero-box {
-  display: grid;
-}
-
 .hero__content {
-  grid-area: 1 / 1;
   max-width: calc(570rem / 16);
 }
 
 .hero__img-box {
-  grid-area: 1 / 1;
   justify-self: end;
   margin-right: calc(-165rem / 16);
   z-index: -1;
@@ -221,7 +228,6 @@ body {
 .design {
   max-width: calc(1440rem / 16);
   margin: 0 auto;
-  display: grid;
   grid-template-columns: 4fr 3.84fr;
   color: var(--color-white);
 }
@@ -234,7 +240,6 @@ body {
 
 .design__content {
   height: calc(784rem / 16);
-  display: grid;
   background: var(--color-bgBlack);
   padding: 12.5rem 6.625rem 12.5rem 9.625rem;
   position: relative;
@@ -266,10 +271,8 @@ body {
 .design__link:link,
 .design__link:visited {
   /* I chose to work with grid, because it was giving a little bug in hover */
-  display: grid;
   justify-content: start;
   gap: 0.5rem;
-
   font: var(--fw-extraBold) 1.125rem/1.22 "Commissioner";
   color: var(--color-red);
   transition: all 0.3s ease-in-out;
@@ -293,13 +296,11 @@ body {
 /*----------------*/
 /*=====SECTION - APPROACH=====*/
 .approach {
-  display: grid;
   max-width: calc(1440rem / 16);
   margin: 0 auto;
 }
 
 .approach-box {
-  grid-area: 1 / 1;
   display: flex;
   align-items: flex-start;
   gap: 125px;
@@ -310,7 +311,6 @@ body {
 }
 
 .bg {
-  grid-area: 1 / 1;
   justify-self: end;
   width: calc(895rem / 16);
   height: calc(1100rem / 16);
@@ -319,7 +319,6 @@ body {
 }
 
 .approach__title {
-  grid-area: 1 / 1;
   justify-self: start;
   max-width: calc(540rem / 16);
   padding-top: calc(200rem / 16);
@@ -327,8 +326,6 @@ body {
 }
 
 .approach__list {
-  grid-area: 1 / 1;
-  display: grid;
   align-content: start;
   row-gap: 3.5rem;
   justify-self: end;
@@ -339,14 +336,12 @@ body {
 }
 
 .approach__item {
-  display: grid;
   justify-content: start;
   height: calc(196rem / 16);
 }
 
 .approach__number {
   opacity: 0.25;
-  grid-area: 1 / 1;
   color: var(--color-white);
 }
 
@@ -360,7 +355,6 @@ body {
 }
 
 .approach__item-box {
-  grid-area: 1 / 1;
   align-self: end;
   padding-left: 3.75rem;
 }
@@ -368,15 +362,12 @@ body {
 /*----------------*/
 /*=====SECTION - BRAND=====*/
 .brand-box {
-  display: grid;
   max-width: calc(1440rem / 16);
   margin: 0 auto;
   position: relative;
 }
 
 .brand {
-  grid-area: 1 / 1;
-  display: grid;
   width: 100%;
   margin: 0 auto;
 }
@@ -386,7 +377,6 @@ body {
 }
 
 .brand__title-box {
-  grid-area: 1 / 1;
   max-width: calc(735rem / 16);
   height: calc(528rem / 16);
   padding: 9.5rem 7.813rem 9.5rem 10.313rem;
@@ -436,8 +426,6 @@ body {
 }
 
 .brand__content {
-  grid-area: 1 / 1;
-  display: grid;
   justify-self: end;
   z-index: -1;
   position: relative;
@@ -454,7 +442,6 @@ body {
 }
 
 .brand__img-box {
-  grid-area: 1 / 1;
   place-self: end end;
   transition: all 0.3s;
 }
@@ -464,9 +451,7 @@ body {
 }
 
 .brand__info {
-  display: grid;
   color: var(--color-white);
-  grid-area: 1 / 1;
   place-self: end;
   margin-right: calc(154rem / 16);
   margin-bottom: calc(68rem / 16);
@@ -581,13 +566,4 @@ body {
 .footer__btn:hover,
 .footer__btn:active {
   background: #ff9393;
-}
-
-.section {
-  transition: transform 1s, opacity 1s;
-}
-
-.section--hidden {
-  opacity: 0;
-  transform: translateY(-8rem);
 }

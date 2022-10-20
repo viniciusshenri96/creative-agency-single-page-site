@@ -18,12 +18,12 @@
       href="./assets/img/favicon.png"
     />
 
-    <title>Frontend Mentor | Creative single page site</title>
+    <title>Creative</title>
   </head>
 
   <body>
-    <header class="header container">
-      <div class="header-box">
+    <header class="header container grid-layout">
+      <div class="header-box grid-area">
         <a href="/" class="header__logo">
           <img src="./assets/img/desktop/logo.svg" alt="" />
         </a>
@@ -49,7 +49,7 @@
           </button>
 
           <div class="nav__menu-box" data-menu="menu-list">
-            <ul class="nav__list" data-menu="list">
+            <ul class="nav__list grid-layout" data-menu="list">
               <li><a class="nav__link" href="#">About</a></li>
               <li><a class="nav__link" href="#">Service</a></li>
               <li><a class="nav__link" href="#">Projects</a></li>
@@ -61,8 +61,8 @@
     </header>
 
     <section class="hero container">
-      <div class="hero-box">
-        <div class="hero__content">
+      <div class="hero-box grid-layout">
+        <div class="hero__content grid-area">
           <h1 class="hero__title font-h1">Branding & website design agency</h1>
           <p class="hero__desc font-body">
             We specialize in visual storytelling by creating cohesive brand and
@@ -71,7 +71,7 @@
           </p>
           <a class="hero__btn" href="#">Learn More</a>
         </div>
-        <picture class="hero__img-box">
+        <picture class="hero__img-box grid-area">
           <source
             media="(max-width: 380px)"
             srcset="./assets/img/mobile/image-hero.jpg"
@@ -93,7 +93,7 @@
       </div>
     </section>
 
-    <section class="section design">
+    <section class="section design grid-layout">
       <picture class="design__img-box">
         <source
           media="(max-width: 520px)"
@@ -109,7 +109,7 @@
           alt=""
         />
       </picture>
-      <div class="design__content">
+      <div class="design__content grid-layout">
         <div class="design__content-box">
           <h2 class="design__title font-h2">
             <span class="design__title--red">Design</span> is strategic.
@@ -119,20 +119,20 @@
             outcomes and brand awareness. We are firm believers that success
             lies in creative collaboration with our clients.”
           </p>
-          <a class="design__link" href="#">Schedule a Call</a>
+          <a class="design__link grid-layout" href="#">Schedule a Call</a>
         </div>
       </div>
     </section>
 
-    <section class="section approach">
-      <div class="approach-box">
-        <h2 class="approach__title font-h2">
+    <section class="section approach grid-layout">
+      <div class="approach-box grid-area">
+        <h2 class="approach__title grid-area font-h2">
           Our approach for creating a winning brand
         </h2>
-        <ul class="approach__list">
-          <li class="approach__item">
-            <span class="approach__number font-h1">01</span>
-            <div class="approach__item-box">
+        <ul class="approach__list grid-area grid-layout">
+          <li class="approach__item grid-layout">
+            <span class="approach__number grid-area font-h1">01</span>
+            <div class="approach__item-box grid-area">
               <h3 class="approach__sub font-h3">Brand Strategy</h3>
               <p class="approach__desc font-body">
                 Brand strategy is critical for long-term success. Outshining
@@ -140,9 +140,9 @@
               </p>
             </div>
           </li>
-          <li class="approach__item">
-            <span class="approach__number font-h1">02</span>
-            <div class="approach__item-box">
+          <li class="approach__item grid-layout">
+            <span class="approach__number grid-area grid-area font-h1">02</span>
+            <div class="approach__item-box grid-area">
               <h3 class="approach__sub font-h3">Brand Design</h3>
               <p class="approach__desc font-body">
                 Keeping the brand design unique and meaningful helps in
@@ -150,9 +150,9 @@
               </p>
             </div>
           </li>
-          <li class="approach__item">
-            <span class="approach__number font-h1">03</span>
-            <div class="approach__item-box">
+          <li class="approach__item grid-layout">
+            <span class="approach__number grid-area font-h1">03</span>
+            <div class="approach__item-box grid-area">
               <h3 class="approach__sub font-h3">Web Design</h3>
               <p class="approach__desc font-body">
                 A beautifully crafted website is the best tool for brand
@@ -164,18 +164,18 @@
         <!-- <div class="approach__content">
         </div> -->
       </div>
-      <div class="bg"></div>
+      <div class="bg grid-area"></div>
 
       <!-- <div class="bg"></div> -->
     </section>
 
-    <section class="section brand-box">
-      <div class="brand">
-        <div class="brand__title-box">
+    <section class="section brand-box grid-layout">
+      <div class="brand grid-layout grid-area">
+        <div class="brand__title-box grid-area">
           <h2 class="brand__title font-h2">Brand naming & guidelines</h2>
         </div>
-        <div class="brand__content">
-          <picture class="brand__img-box">
+        <div class="brand__content grid-layout grid-area">
+          <picture class="brand__img-box grid-area">
             <source
               media="(max-width: 500px)"
               srcset="./assets/img/mobile/image-slide-1.jpg"
@@ -190,18 +190,18 @@
               alt=""
             />
           </picture>
-          <p class="brand__info font-body">
+          <p class="brand__info grid-layout font-body grid-area">
             Lean Product Roadmap
             <span class="brand__date"> 2019 Project </span>
           </p>
         </div>
       </div>
-      <div class="brand visible">
-        <div class="brand__title-box">
+      <div class="brand grid-layout grid-area visible">
+        <div class="brand__title-box grid-area">
           <h2 class="brand__title font-h2">Brand identity & merchandise</h2>
         </div>
-        <div class="brand__content">
-          <picture class="brand__img-box">
+        <div class="brand__content grid-layout grid-area">
+          <picture class="brand__img-box grid-area">
             <source
               media="(max-width: 500px)"
               srcset="./assets/img/mobile/image-slide-2.jpg"
@@ -216,18 +216,18 @@
               alt=""
             />
           </picture>
-          <p class="brand__info font-body">
+          <p class="brand__info grid-area font-body">
             New Majestic Hotel
             <span class="brand__date">2018 Project</span>
           </p>
         </div>
       </div>
-      <div class="brand visible">
-        <div class="brand__title-box">
+      <div class="brand grid-layout grid-area visible">
+        <div class="brand__title-box grid-area">
           <h2 class="brand__title font-h2">Brand identity & web design</h2>
         </div>
-        <div class="brand__content">
-          <picture class="brand__img-box">
+        <div class="brand__content grid-layout grid-area">
+          <picture class="brand__img-box grid-area">
             <source
               media="(max-width: 500px)"
               srcset="./assets/img/mobile/image-slide-3.jpg"
@@ -242,7 +242,7 @@
               alt=""
             />
           </picture>
-          <p class="brand__info font-body">
+          <p class="brand__info grid-area grid-layout font-body">
             Crypto Dashboard
             <span class="brand__date">2016 Project</span>
           </p>
@@ -250,8 +250,8 @@
       </div>
 
       <div class="brand__btn-box">
-        <button class="brand__btn-left">
-          <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+        <button class="brand__btn-left" aria-label="left">
+          <svg aria-hidden="true" width="40" height="40">
             <g
               transform="matrix(-1 0 0 1 40 0)"
               stroke="#F94F4F"
@@ -263,8 +263,8 @@
             </g>
           </svg>
         </button>
-        <button class="brand__btn-right">
-          <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+        <button class="brand__btn-right" aria-label="right">
+          <svg aria-hidden="true" width="40" height="40">
             <g stroke="#F94F4F" fill="none" fill-rule="evenodd">
               <circle cx="20" cy="20" r="19.5" />
               <path stroke-width="2" d="M17.5 15l5 5-5 5" />
