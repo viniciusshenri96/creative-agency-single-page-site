@@ -490,3 +490,77 @@
     left: 1.5rem;
   }
 }
+
+@media (max-width: 20rem) {
+  .nav__btn:link,
+  .hero__btn:link,
+  .footer__btn:link {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav__menu-box {
+    top: calc(110rem / 16);
+    right: calc(8rem / 16);
+  }
+
+  .hero-box {
+    margin-bottom: 3.75rem;
+  }
+
+  .hero__title {
+    font-size: 1.5rem;
+  }
+
+  .hero__btn:link {
+    font-size: 1rem;
+  }
+
+  .design__title {
+    font-size: 1rem;
+  }
+
+  .design__desc,
+  .hero__desc {
+    font-size: 0.75rem;
+  }
+
+  .design__link:link {
+    font-size: 1rem;
+  }
+
+  .approach__title,
+  .brand__title,
+  .footer__desc {
+    font-size: 1.5rem;
+  }
+
+  .approach__desc {
+    font-size: 0.75rem;
+  }
+
+  .brand__title {
+    max-width: 12.5rem;
+  }
+
+  .brand__info {
+    margin-right: calc(160rem / 16);
+    margin-bottom: calc(20rem / 16);
+  }
+
+  .header__logo {
+    max-width: 6.25rem;
+  }
+
+  .footer {
+    text-align: left;
+  }
+
+  .footer.container {
+    padding-top: calc(60rem / 16);
+    padding-bottom: calc(60rem / 16);
+  }
+
+  .footer__btn:link {
+    align-self: start;
+  }
+}
