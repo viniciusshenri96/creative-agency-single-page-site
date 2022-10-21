@@ -96,7 +96,6 @@ allSection.forEach((section) => {
 // ====== Menu fade animation ======
 const nav = document.querySelector(".nav");
 
-// The function created inside the menuAnimation function, will have access to the parameter of the parent function, even after it is executed, this is called closure.
 const menuAnimation = function (opacity) {
   return function (e) {
     const clicked = e.target.closest(".nav__link");
@@ -123,7 +122,6 @@ nav.addEventListener("mouseout", menuAnimation(1));
 const menuButton = document.querySelector('[data-menu="button"');
 
 const menuList = document.querySelector('[data-menu="menu-list"');
-
 const events = "click";
 const classAct = "active";
 
@@ -151,22 +149,8 @@ function outsideClick(element, events, callback) {
   function handleOutsideClick(event) {
     if (!element.contains(event.target)) {
       element.removeAttribute(outside);
-
       html.removeEventListener(events, handleOutsideClick);
-
       callback();
     }
   }
 }
-
-// // When the screen is larger than 800px, the mobile menu automatically closes
-// const bigDisplay = function () {
-//   const displayResize = matchMedia("(min-width: 700px)").matches;
-
-//   if (displayResize) {
-//     menuList.classList.remove("active");
-//     menuButton.classList.remove("active");
-//   }
-// };
-
-// window.addEventListener("resize", bigDisplay);

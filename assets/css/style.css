@@ -55,7 +55,7 @@
  */
 *:focus,
 *:focus-visible {
-  outline: #646464 dotted 4px;
+  outline: #f94f4f dotted 4px;
   outline-offset: 4px;
 }
 
@@ -89,7 +89,8 @@ body {
 
 /* Layout */
 .container {
-  max-width: 74.375rem;
+  /* converting for rem with to function calc*/
+  max-width: calc(74.375rem / 16);
   padding: 0 2.5rem;
   margin: 0 auto;
 }
@@ -303,7 +304,7 @@ body {
 .approach-box {
   display: flex;
   align-items: flex-start;
-  gap: 125px;
+  gap: calc(125rem / 16);
   justify-self: end;
   max-width: calc(1312rem / 16);
   padding: 0 2.5rem;
@@ -330,7 +331,6 @@ body {
   row-gap: 3.5rem;
   justify-self: end;
 
-  /* converting for rem with to function calc*/
   max-width: calc(504rem / 16);
   z-index: 2;
 }
@@ -424,13 +424,6 @@ body {
   border: none;
   background: none;
   cursor: pointer;
-}
-
-.brand__btn-left,
-.brand__btn-left svg:hover,
-.brand__btn-right svg,
-.brand__btn-right svg:hover {
-  stroke: #ff9393;
 }
 
 .brand__btn-box {

@@ -35,7 +35,7 @@
   /* HEADER */
   .header::after {
     width: calc(438rem / 16);
-    height: 178px;
+    height: calc(178rem / 16);
     margin-right: -40px;
   }
 
@@ -117,7 +117,7 @@
 
   /* APPROACH */
   .approach-box {
-    gap: 53px;
+    gap: calc(53rem / 16);
     max-width: calc(1312rem / 16);
     padding: 0 2.5rem;
     margin-right: 0;
@@ -169,9 +169,12 @@
   }
 
   .brand__title-box::before {
-    width: 63px;
-    height: 29px;
-    background-size: 63px 29px;
+    --width: calc(63rem / 16);
+    --height: calc(29rem / 16);
+
+    width: var(--width);
+    height: var(--height);
+    background-size: var(--width) var(--height);
     top: 35%;
     right: 0;
     transform: translateX(50%) scale(-1, 1);
@@ -180,7 +183,7 @@
   .brand__title {
     font-size: 2rem;
     line-height: 1.25;
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
   }
 
   .brand__img {
@@ -188,11 +191,11 @@
   }
 
   .brand__info {
-    font-size: 15px;
+    font-size: 0.938rem;
     line-height: 1.33;
 
-    margin-right: 40px;
-    margin-bottom: 45px;
+    margin-right: calc(40rem / 16);
+    margin-bottom: calc(45rem / 16);
   }
 
   .brand__date {
