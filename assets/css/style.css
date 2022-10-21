@@ -479,7 +479,7 @@ body {
   place-self: end;
   margin-right: calc(154rem / 16);
   margin-bottom: calc(68rem / 16);
-  font-weight: var(--fw-extraBold);
+  font-weight: var(--fw-extraBold) !important;
   z-index: 400;
 }
 
