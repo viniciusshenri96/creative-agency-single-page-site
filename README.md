@@ -45,29 +45,27 @@
 - The function created inside the menuAnimation function, will have access to the parameter of the parent function (opacity), even after it is executed, this happens because of the closure
 
 ```js
-const proudOfThisFunc = () => {
-  const menuAnimation = function (opacity) {
-    return function (e) {
-      const clicked = e.target.closest(".nav__link");
+const menuAnimation = function (opacity) {
+  return function (e) {
+    const clicked = e.target.closest(".nav__link");
 
-      if (!clicked) return;
+    if (!clicked) return;
 
-      if (clicked.classList.contains("nav__link")) {
-        const link = e.target;
-        const sibling = document.querySelectorAll(".nav__link");
-        const logo = nav.closest(".header-box").querySelector(".header__logo");
+    if (clicked.classList.contains("nav__link")) {
+      const link = e.target;
+      const sibling = document.querySelectorAll(".nav__link");
+      const logo = nav.closest(".header-box").querySelector(".header__logo");
 
-        sibling.forEach((el) => {
-          if (el !== link) el.style.opacity = opacity;
-        });
-        logo.style.opacity = opacity;
-      }
-    };
+      sibling.forEach((el) => {
+        if (el !== link) el.style.opacity = opacity;
+      });
+      logo.style.opacity = opacity;
+    }
   };
-
-  nav.addEventListener("mouseover", menuAnimation(0.5));
-  nav.addEventListener("mouseout", menuAnimation(1));
 };
+
+nav.addEventListener("mouseover", menuAnimation(0.5));
+nav.addEventListener("mouseout", menuAnimation(1));
 ```
 
 <img alt="" title="" src="readme/nivel.svg"/>
