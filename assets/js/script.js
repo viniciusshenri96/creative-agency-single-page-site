@@ -106,11 +106,13 @@ const menuAnimation = function (opacity) {
       const link = e.target;
       const sibling = document.querySelectorAll(".nav__link");
       const logo = nav.closest(".header-box").querySelector(".header__logo");
+      const btn = nav.closest(".header-box").querySelector(".nav__btn");
 
       sibling.forEach((el) => {
         if (el !== link) el.style.opacity = opacity;
       });
       logo.style.opacity = opacity;
+      btn.opacity = opacity;
     }
   };
 };

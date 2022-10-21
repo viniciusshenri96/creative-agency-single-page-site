@@ -491,7 +491,7 @@
   }
 }
 
-@media (max-width: 20rem) {
+@media (max-width: 20em) {
   .nav__btn:link,
   .hero__btn:link,
   .footer__btn:link {
@@ -549,10 +549,6 @@
 
   .header__logo {
     max-width: 6.25rem;
-  }
-
-  .footer {
-    text-align: left;
   }
 
   .footer.container {
