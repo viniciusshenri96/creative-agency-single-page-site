@@ -14,12 +14,12 @@
     align-content: start;
     gap: 1rem;
     place-self: initial;
-    padding-top: calc(44rem / 16);
-    padding-left: calc(16rem / 16);
+    padding-top: 2.75rem;
+    padding-left: 1rem;
   }
 
   .brand__title-box {
-    max-width: calc(635rem / 16);
+    max-width: 39.688rem;
   }
 
   .brand__title {
@@ -27,16 +27,16 @@
   }
 
   .brand__img {
-    max-width: calc(780rem / 16);
+    max-width: 48.75rem;
   }
 }
 
 @media (max-width: 58.75em) {
   /* HEADER */
   .header::after {
-    width: calc(438rem / 16);
-    height: calc(178rem / 16);
-    margin-right: -40px;
+    width: 27.375rem;
+    height: 11.125rem;
+    margin-right: -2.5rem;
   }
 
   .nav__menu-box {
@@ -54,25 +54,25 @@
 
   /* HERO */
   .hero__content {
-    max-width: calc(420rem / 16);
+    max-width: 26.25rem;
   }
 
   .hero__title {
     font-size: 3.5rem;
     line-height: 1;
-    padding-top: calc(77rem / 16);
-    margin-bottom: calc(19rem / 16);
+    padding-top: 4.813rem;
+    margin-bottom: 1.188rem;
   }
 
   .hero__desc {
     font-size: 0.938rem;
     line-height: 1.67;
-    max-width: calc(400rem / 16);
+    max-width: 25rem;
     margin-bottom: 2rem;
   }
 
   .hero__img-box {
-    margin-right: -40px;
+    margin-right: -2.5rem;
   }
 
   /* DESIGN */
@@ -82,13 +82,16 @@
 
   .design__content {
     padding: 7.5rem 2.5rem 7.5rem 4.375rem;
-    height: calc(538rem / 16);
+    height: 33.625rem;
   }
 
   .design__content::before {
-    width: calc(63rem / 16);
-    height: calc(29rem / 16);
-    background-size: calc(63rem / 16) calc(29rem / 16);
+    --width: 3.938rem;
+    --height: 1.813rem;
+
+    width: var(--width);
+    height: var(--height);
+    background-size: var(--width) var(--height);
     position: absolute;
     top: 27%;
     left: 0;
@@ -103,7 +106,7 @@
   .design__title {
     font-size: 2rem;
     line-height: 1.25;
-    max-width: calc(140rem / 16);
+    max-width: 8.75rem;
   }
 
   .design__desc {
@@ -112,22 +115,22 @@
   }
 
   .design__img {
-    height: calc(658rem / 16);
+    height: 41.125rem;
   }
 
   /* APPROACH */
   .approach-box {
-    gap: calc(53rem / 16);
-    max-width: calc(1312rem / 16);
+    gap: 3.313rem;
+    max-width: 82rem;
     padding: 0 2.5rem;
     margin-right: 0;
   }
 
   .bg {
-    width: calc(438rem / 16);
-    height: calc(797rem / 16);
+    width: 27.375rem;
+    height: 49.813rem;
     margin-right: 0;
-    margin-top: -120px;
+    margin-top: -7.5rem;
   }
 
   .approach__content {
@@ -137,7 +140,7 @@
   .approach__title {
     font-size: 2rem;
     line-height: 1.25;
-    max-width: calc(281rem / 16);
+    max-width: 17.563rem;
   }
 
   .approach__desc,
@@ -149,11 +152,11 @@
   .approach__list {
     display: grid;
     row-gap: 2.5rem;
-    max-width: calc(355rem / 16);
+    max-width: 22.188rem;
   }
 
   .approach__item {
-    height: calc(159rem / 16);
+    height: 9.938rem;
   }
 
   .approach__sub {
@@ -163,14 +166,14 @@
   /* BRAND */
 
   .brand__title-box {
-    max-width: calc(390rem / 16);
-    height: calc(352rem / 16);
+    max-width: 24.375rem;
+    height: 22rem;
     padding: 6.25rem 4.375rem 6.25rem 2.5rem;
   }
 
   .brand__title-box::before {
-    --width: calc(63rem / 16);
-    --height: calc(29rem / 16);
+    --width: 3.938rem;
+    --height: 1.813rem;
 
     width: var(--width);
     height: var(--height);
@@ -187,15 +190,15 @@
   }
 
   .brand__img {
-    max-width: calc(580rem / 16);
+    max-width: 36.25rem;
   }
 
   .brand__info {
     font-size: 0.938rem;
     line-height: 1.33;
 
-    margin-right: calc(40rem / 16);
-    margin-bottom: calc(45rem / 16);
+    margin-right: 2.5rem;
+    margin-bottom: 2.813rem;
   }
 
   .brand__date {
@@ -204,14 +207,14 @@
   }
 
   .brand__btn-box {
-    top: 212px;
-    left: 40px;
+    top: 13.25rem;
+    left: 2.5rem;
   }
 
   .footer__desc {
     font-size: 2rem;
     line-height: 1.25;
-    max-width: calc(398rem / 16);
+    max-width: 24.875rem;
   }
 }
 
@@ -257,8 +260,8 @@
     background: var(--color-bgBlack);
     padding: 2rem 1.625rem 1.75rem 1.688rem;
     position: absolute;
-    top: calc(110rem / 16);
-    right: calc(26rem / 16);
+    top: 6.875rem;
+    right: 1.625rem;
   }
 
   [data-menu="button"] {
@@ -357,7 +360,7 @@
   }
 
   .design__img {
-    height: calc(580rem / 16);
+    height: 36.25rem;
   }
 
   .design__link:link,
@@ -384,14 +387,14 @@
 
   .approach__title {
     color: var(--color-white);
-    padding-top: calc(96rem / 16);
+    padding-top: 6rem;
     margin-bottom: 0;
-    max-width: calc(327rem / 16);
+    max-width: 20.438rem;
   }
 
   .approach__list {
-    padding-bottom: calc(96rem / 16);
-    max-width: calc(327rem / 16);
+    padding-bottom: 6rem;
+    max-width: 20.438rem;
   }
 
   .approach__content {
@@ -409,7 +412,7 @@
   .approach__item {
     display: grid;
     justify-content: start;
-    height: calc(160rem / 16);
+    height: 10rem;
   }
 
   /* FOOTER */
@@ -433,12 +436,12 @@
 
   .design__img {
     width: 100%;
-    height: calc(200rem / 16);
+    height: 12.5rem;
   }
 
   .design__content {
     text-align: initial;
-    height: calc(377rem / 16);
+    height: 23.563rem;
     padding: 4.5rem 1.5rem;
     display: grid;
     position: relative;
@@ -462,7 +465,7 @@
   /* BRAND */
   .brand__title-box {
     max-width: 100%;
-    height: calc(272rem / 16);
+    height: 17rem;
     padding: 4rem 1.5rem;
   }
 
@@ -499,8 +502,8 @@
   }
 
   .nav__menu-box {
-    top: calc(110rem / 16);
-    right: calc(8rem / 16);
+    top: 6.875rem;
+    right: 0.5rem;
   }
 
   .hero-box {
@@ -543,8 +546,8 @@
   }
 
   .brand__info {
-    margin-right: calc(160rem / 16);
-    margin-bottom: calc(20rem / 16);
+    margin-right: 10rem;
+    margin-bottom: 1.25rem;
   }
 
   .header__logo {
@@ -552,8 +555,8 @@
   }
 
   .footer.container {
-    padding-top: calc(60rem / 16);
-    padding-bottom: calc(60rem / 16);
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
   }
 
   .footer__btn:link {
