@@ -1,10 +1,3 @@
-@media (max-width: 78.75em) {
-  .design__content {
-    padding-right: 2.5rem;
-    padding-left: 7.5rem;
-  }
-}
-
 @media (max-width: 67.5em) {
   .hero__title {
     font-size: 4.3rem;
@@ -16,6 +9,11 @@
     place-self: initial;
     padding-top: 2.75rem;
     padding-left: 1rem;
+  }
+
+  .design__content {
+    padding-right: 2.5rem;
+    padding-left: 7.5rem;
   }
 
   .brand__title-box {
@@ -120,47 +118,15 @@
 
   /* APPROACH */
   .approach-box {
-    gap: 3.313rem;
-    max-width: 82rem;
+    gap: 2rem;
     padding: 0 2.5rem;
     margin-right: 0;
   }
 
   .bg {
-    width: 27.375rem;
-    height: 49.813rem;
+    width: 40.375rem;
     margin-right: 0;
     margin-top: -7.5rem;
-  }
-
-  .approach__content {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .approach__title {
-    font-size: 2rem;
-    line-height: 1.25;
-    max-width: 17.563rem;
-  }
-
-  .approach__desc,
-  .approach__sub {
-    font-size: 0.938rem;
-    line-height: 1.67;
-  }
-
-  .approach__list {
-    display: grid;
-    row-gap: 2.5rem;
-    max-width: 22.188rem;
-  }
-
-  .approach__item {
-    height: 9.938rem;
-  }
-
-  .approach__sub {
-    margin: 0;
   }
 
   /* BRAND */
@@ -218,6 +184,50 @@
   }
 }
 
+@media (max-width: 50rem) {
+  .approach-box {
+    gap: 3.313rem;
+    padding: 0 2.5rem;
+    margin-right: 0;
+  }
+  .bg {
+    width: 27.375rem;
+    height: 49.813rem;
+    margin-right: 0;
+    margin-top: -7.5rem;
+  }
+
+  .approach__content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .approach__title {
+    font-size: 2rem;
+    line-height: 1.25;
+    max-width: 17.563rem;
+  }
+
+  .approach__desc,
+  .approach__sub {
+    font-size: 0.938rem;
+    line-height: 1.67;
+  }
+
+  .approach__list {
+    display: grid;
+    row-gap: 2.5rem;
+    max-width: 22.188rem;
+  }
+
+  .approach__item {
+    height: 9.938rem;
+  }
+
+  .approach__sub {
+    margin: 0;
+  }
+}
+
 @media (max-width: 41.25em) {
   .container {
     padding: 0 1.5rem;
@@ -226,6 +236,7 @@
   .header {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+    position: relative;
   }
 
   .header-box {
@@ -502,8 +513,8 @@
   }
 
   .nav__menu-box {
-    top: 6.875rem;
-    right: 0.5rem;
+    top: 5rem;
+    right: 1rem;
   }
 
   .hero-box {
@@ -551,7 +562,7 @@
   }
 
   .header__logo {
-    max-width: 6.25rem;
+    max-width: 7.188rem;
   }
 
   .footer.container {

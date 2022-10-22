@@ -440,6 +440,19 @@ body {
   cursor: pointer;
 }
 
+.sr-only {
+  position: absolute !important;
+  margin: -1px !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+}
+
 .brand__btn-box {
   display: flex;
   gap: 1rem;
@@ -447,6 +460,18 @@ body {
   position: absolute;
   top: 21rem;
   left: 10.313rem;
+}
+
+.brand__btn-right svg g,
+.brand__btn-left svg g {
+  transition: all 0.3s ease-in-out;
+}
+
+.brand__btn-left:hover,
+.brand__btn-left:hover svg g,
+.brand__btn-right:hover,
+.brand__btn-right:hover svg g {
+  stroke: #ff9393;
 }
 
 .brand__content {
@@ -520,7 +545,6 @@ body {
   background: var(--color-red);
   padding: 1.438rem 2.75rem 1.375rem 2.813rem;
   transition: all 0.3s ease-in-out;
-
   white-space: nowrap;
 }
 

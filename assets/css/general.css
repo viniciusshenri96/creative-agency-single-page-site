@@ -83,6 +83,13 @@ a:link {
   text-decoration: none;
 }
 
+button,
+[type="button"] {
+  -webkit-appearance: button;
+  text-transform: none;
+  overflow: visible;
+}
+
 html,
 body {
   height: 100%;

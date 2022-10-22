@@ -26,15 +26,19 @@
     <header class="header container grid-layout">
       <div class="header-box grid-area">
         <a href="/" class="header__logo">
-          <img src="./assets/img/desktop/logo.svg" alt="" />
+          <img
+            src="./assets/img/desktop/logo.svg"
+            alt="creative writing logo with a red icon"
+          />
         </a>
         <nav class="nav">
           <button
             data-menu="button"
             aria-expanded="false"
             aria-controls="menu"
-            aria-label="icons"
+            aria-label="menu"
           >
+            <span class="sr-only">menu</span>
             <svg width="24" height="18" aria-hidden="true">
               <g fill="#000" fill-rule="evenodd" opacity=".5">
                 <path d="M0 0h24v2H0zM0 8h24v2H0zM0 16h24v2H0z" />
@@ -259,7 +263,8 @@
         </div>
 
         <div class="brand__btn-box">
-          <button class="brand__btn-left" aria-label="left">
+          <button class="brand__btn-left" aria-label="left" type="button">
+            <span class="sr-only">left</span>
             <svg aria-hidden="true" width="40" height="40">
               <g
                 transform="matrix(-1 0 0 1 40 0)"
@@ -272,7 +277,8 @@
               </g>
             </svg>
           </button>
-          <button class="brand__btn-right" aria-label="right">
+          <button class="brand__btn-right" aria-label="right" type="button">
+            <span class="sr-only">right</span>
             <svg aria-hidden="true" width="40" height="40">
               <g stroke="#F94F4F" fill="none" fill-rule="evenodd">
                 <circle cx="20" cy="20" r="19.5" />

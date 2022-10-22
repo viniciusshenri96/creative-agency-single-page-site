@@ -124,34 +124,34 @@ nav.addEventListener("mouseout", menuAnimation(1));
 const menuButton = document.querySelector('[data-menu="button"');
 
 const menuList = document.querySelector('[data-menu="menu-list"');
-const events = "click";
+const eventAdd = "click";
 const classAct = "active";
 
 const openMenu = function () {
   menuList.classList.add(classAct);
   menuButton.classList.add(classAct);
 
-  outsideClick(menuList, events, () => {
+  outsideClick(menuList, eventAdd, () => {
     menuList.classList.remove(classAct);
     menuButton.classList.remove(classAct);
   });
 };
 
-menuButton.addEventListener(events, openMenu);
+menuButton.addEventListener(eventAdd, openMenu);
 
-function outsideClick(element, events, callback) {
+function outsideClick(element, eventAdd, callback) {
   const html = document.querySelector("html");
   const outside = "data-outside";
 
   if (!element.hasAttribute(outside)) {
-    setTimeout(() => html.addEventListener(events, handleOutsideClick));
+    setTimeout(() => html.addEventListener(eventAdd, handleOutsideClick));
     element.setAttribute(outside, "");
   }
 
   function handleOutsideClick(event) {
     if (!element.contains(event.target)) {
       element.removeAttribute(outside);
-      html.removeEventListener(events, handleOutsideClick);
+      html.removeEventListener(eventAdd, handleOutsideClick);
       callback();
     }
   }
