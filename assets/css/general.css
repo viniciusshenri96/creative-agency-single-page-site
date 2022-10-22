@@ -23,7 +23,7 @@
 
 /* TYPOGRAPHY */
 .font-h1 {
-  font: var(--fw-extraBold) var(--font-xl) / 1.1 "Commissioner";
+  font: var(--fw-extraBold) var(--font-xl) / 88px "Commissioner";
 }
 
 .font-h2 {

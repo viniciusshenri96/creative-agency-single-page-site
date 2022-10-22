@@ -103,7 +103,7 @@
 
 .hero__title {
   padding-top: 7rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .hero__desc {
@@ -166,7 +166,7 @@
 }
 
 .design__title {
-  margin-bottom: 2.688rem;
+  margin-bottom: 3rem;
 }
 
 .design__desc {
@@ -319,12 +319,11 @@
   position: absolute;
   top: 35%;
   right: 0;
-  transform: translateX(40%) scale(-1, 1);
+  transform: translateX(40%);
 }
 
 .brand__title {
   color: var(--color-white);
-  margin-bottom: 3.188rem;
 }
 
 .brand__btn-right,
@@ -334,6 +333,13 @@
   cursor: pointer;
 }
 
+/**
+ * Screen Reader Class
+ * 
+ * To hide content visually.
+ *
+ * For more information: https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034
+ */
 .sr-only {
   position: absolute !important;
   margin: -1px !important;

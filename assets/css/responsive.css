@@ -59,7 +59,7 @@
     font-size: 3.5rem;
     line-height: 1;
     padding-top: 4.813rem;
-    margin-bottom: 1.188rem;
+    margin-bottom: 2rem;
   }
 
   .hero__desc {
@@ -152,7 +152,6 @@
   .brand__title {
     font-size: 2rem;
     line-height: 1.25;
-    margin-bottom: 2rem;
   }
 
   .brand__img {
@@ -334,7 +333,7 @@
     line-height: 1;
     max-width: 100%;
     padding-top: initial;
-    margin-bottom: 0.938rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero__desc {
@@ -466,6 +465,11 @@
 
   .design__title {
     max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .design__desc {
+    margin-bottom: 2.5rem;
   }
 
   .design__link:link,
