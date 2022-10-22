@@ -333,26 +333,6 @@
   cursor: pointer;
 }
 
-/**
- * Screen Reader Class
- * 
- * To hide content visually.
- *
- * For more information: https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034
- */
-.sr-only {
-  position: absolute !important;
-  margin: -1px !important;
-  -webkit-clip-path: inset(50%) !important;
-  clip-path: inset(50%) !important;
-  border: 0 !important;
-  padding: 0 !important;
-  width: 1px !important;
-  height: 1px !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-}
-
 .brand__btn-box {
   display: flex;
   gap: 1rem;
