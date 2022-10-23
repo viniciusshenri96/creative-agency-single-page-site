@@ -186,7 +186,7 @@ The following tools and technologies were used in the construction of the projec
 
 ---
 
-## 🦸 Author
+## Author
 
 <a href="https://www.frontendmentor.io/profile/viniciushenrique2015">
   <!-- <img style="border-radius: 50%;" src="./assets/img/avatar.jpg" width="100px;" alt=""/> -->
