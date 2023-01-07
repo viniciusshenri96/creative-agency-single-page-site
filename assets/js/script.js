@@ -130,8 +130,10 @@ const classAct = "active";
 const openMenu = function () {
   menuList.classList.add(classAct);
   menuButton.classList.add(classAct);
+  menuButton.setAttribute("aria-expanded", "true");
 
   outsideClick(menuList, eventAdd, () => {
+    menuButton.setAttribute("aria-expanded", "false");
     menuList.classList.remove(classAct);
     menuButton.classList.remove(classAct);
   });
