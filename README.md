@@ -59,14 +59,14 @@ document.addEventListener("keydown", function (e) {
 
 - Building a Slider Component with Events and quite logica.
 
-- I used grid area, so that the elements were in the same row and in the same column, with that I just positioned inside the grid. this is only possible by defining the parent element with display:grid and the children grid-area: 1/-1, for that I also used reusable class, and in HTML I put the class where it should
+- I used grid area, so that the elements were in the same row and in the same column, with that I just positioned inside the grid. this is only possible by defining the parent element with display:grid and the children grid-area: 1/1, for that I also used reusable class, and in HTML I put the class where it should
 
 ```css
 .grid-layout {
   display: grid;
 }
 .grid-area {
-  grid-area: 1 / -1;
+  grid-area: 1 / 1;
 }
 ```
 
