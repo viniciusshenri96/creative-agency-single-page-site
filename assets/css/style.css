@@ -8,6 +8,33 @@
   transform: translateY(-8rem);
 }
 
+.skip-content {
+  background-color: var(--color-bgBlack);
+  color: var(--color-white);
+  display: inline-block;
+  position: fixed;
+  left: 0;
+  top: 48px;
+  padding: 1.25rem 2.5rem;
+  text-decoration: 0.1rem solid;
+  transform: translateX(-200%);
+  z-index: 800;
+  opacity: 1;
+}
+
+.skip-content:focus,
+.skip-content:focus-visible {
+  outline: 0.25rem solid var(--color-darkCyan);
+  outline-offset: 0.25rem;
+  transform: translate(0);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .skip-content {
+    transition: transform 0.3s ease, color 200ms ease-in-out;
+  }
+}
+
 /*----------------*/
 /*=====HEADER=====*/
 .header-box {
@@ -269,9 +296,6 @@
 
 /*----------------*/
 /*=====SECTION - BRAND=====*/
-.brand {
-  transition: all 0.3s ease-in-out;
-}
 
 .brand.active {
   animation: showSlide 1s forwards;
