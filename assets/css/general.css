@@ -55,7 +55,7 @@
  */
 *:focus,
 *:focus-visible {
-  outline: #646464 dotted 4px;
+  outline: #646464 solid 4px;
   outline-offset: 4px;
 }
 
